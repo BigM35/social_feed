@@ -1,10 +1,11 @@
 import React from 'react';
+import CreatePost from './Components/CreatePost/CreatePost';
 
 
 function App() {
   return (
-    <div className="App">
-    hello world
+    <div>
+      <CreatePost />
     </div>
   );
 }
