@@ -3,19 +3,22 @@ import LikeButton from "../LikeButton/LikeButton";
 
 const DisplayPost = (props) => {
     return (
-        <table>
-            <tbody>
-                {props.parentEntries.map((entry, index)=> {
-                        return (
-                            <tr key={index}>
-                                <td>{entry.name}</td>
+        <table className="table-borderless">
+            {props.parentEntries.map((entry, index)=> {
+                    return (
+                        <tr key={index}>
+                            <thead>
+                                <div>
+                                    <td>{entry.name}</td>
+                                </div>
+                            </thead>
+                            <tbody>
                                 <td>{entry.post}</td>
                                 <td>{<LikeButton/>}</td>
-                            </tr>
-                        )
-                    })}
-               
-            </tbody>
+                            </tbody>
+                        </tr>
+                    )
+                })}
         </table>
     );
 }

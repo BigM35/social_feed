@@ -1,8 +1,19 @@
 
-
-
 .border-box {
     border: 1px;
     border-style: solid;
     border-color: black;
+    margin: 2em;
+    padding: 2em;
+   
+}
+
+.flex-box{
+    display: flexbox;
+}
+
+.media-block .media-body {
+    display: block;
+    overflow: hidden;
+    width: auto
 }

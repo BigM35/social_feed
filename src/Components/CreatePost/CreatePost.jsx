@@ -1,29 +1,34 @@
 import { useState } from "react";
-
+import "./CreatePost.css"
 
 const CreatePost = (props) => {
 
     const[Name, setName] = useState('')
     const[Post, setPost] = useState('')
 
-    function handleSubmit(){
-        event.preventDefault;
+    
+    function handleSubmit(event){
+        event.preventDefault();
 
         let newEntry = {
             name: Name,
-            Post: Post
+            post: Post
         };
-        props./*someProperty*/(newEntry)
 
-    }
+        props.addNewEntryProperty(newEntry);
+    };
 
     return (
-        <form onSubmit={pass}>
-            <label>Name</label>
-            <input type="string" value={Name} onChange={(event) => setName(event.target.value)} />
+        <form onSubmit={handleSubmit}>
+            <div className="form-group">
+                <label>Name</label>
+                <input type="string" className="form-control" value={Name} onChange={(event) => setName(event.target.value)} />
+            </div>
+            <div class="media-body">
             <label>Post</label>
-            <input type="string" value={Post} onChange={(event) => setPost(event.target.value)} />
-            <button type="submit">Post</button>
+                <textarea type="string" className="form-control" rows="2" value={Post} onChange={(event) => setPost(event.target.value)}></textarea>
+                <button class="btn btn-sm btn-primary pull-right" type="submit"><i class="fa fa-pencil fa-fw"></i> Share</button>
+            </div>
         </form>
 
      );
