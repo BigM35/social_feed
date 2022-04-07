@@ -1,19 +1,32 @@
 
-.border-box {
-    border: 1px;
-    border-style: solid;
-    border-color: black;
-    margin: 2em;
-    padding: 2em;
-   
+
+* {
+    margin: 2;
+    padding: 2;
+    box-sizing: border-box;
+    
 }
 
-.flex-box{
-    display: flexbox;
+.container {
+    display: flex;
+    justify-content: center;
+    margin: 1em;
+    padding: 1em;
 }
 
-.media-block .media-body {
-    display: block;
-    overflow: hidden;
-    width: auto
+.flex-item-1 {
+    box-shadow: .5rem .5rem .5rem .1rem rgba(0, 0, 0, 0.086);
+
+}
+.flex-item-2 {
+    box-shadow:  .5rem .5rem .5rem .1rem rgba(0, 0, 0, 0.086);
+	
+}
+
+.flex flex-item-2 {
+    
+}
+
+.flex flex-item-2 {
+
 }

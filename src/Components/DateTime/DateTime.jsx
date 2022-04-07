@@ -1,13 +1,15 @@
 
 
 
-const DateTime = (props) => {
-    let dateTime = new Date();
-    let time = `${dateTime.getHours}:${dateTime.getMinutes}`
-    let date = `${dateTime.getDay}/${dateTime.getMonth}/${dateTime.getFullYear}`
+const DateTime = (time) => {
+    
+    let currTime = `${time.getHours()}:${time.getMinutes()}`
+    let date = `${time.getMonth()+1}/${time.getDate()}/${time.getFullYear()}`
     
     return ( 
-        `Posted on ${date} at ${time}`
+        
+        `Posted on ${date} at ${currTime}`
+        
      );
 }
  

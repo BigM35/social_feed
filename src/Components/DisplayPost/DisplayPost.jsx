@@ -1,28 +1,27 @@
+import DateTime from "../DateTime/DateTime";
 import LikeButton from "../LikeButton/LikeButton";
-
+import "./DisplayPost.css";
 
 const DisplayPost = (props) => {
+    
     return (
-        <table className="table">
+        <table className="continer">
             {props.parentEntries.map((entry, index)=> {
-                    return (
-                        <tr key={index}>
-                            <thead>
-                                <div>
-                                    <td>{entry.name}</td>
-                                </div>
-                            </thead>
-                            <tbody>
-                                <div>
-                                    <td>{entry.post}</td>
-                                </div>
-                                <div className="text-right">
-                                    <td>{<LikeButton/>}</td>
-                                </div>
-                            </tbody>
-                        </tr>
-                    )
-                })}
+                return (
+                    <tbody>
+                        <div className="flex-box-2">
+                            <td>{entry.name}</td>
+                        </div>
+                        <div className="flex-box-3">
+                            <td>{entry.post}</td>
+                        </div>
+                        <div className={"flex-box-1"}>
+                            <td>{entry.date}</td>
+                            <td className="flex-item-1">{<LikeButton/>}</td>
+                        </div>
+                    </tbody>     
+                )
+            })}
         </table>
     );
 }

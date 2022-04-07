@@ -6,7 +6,6 @@ import { useState } from "react";
 const LikeButton = (props) => {
     
     const [state, setState] = useState(false);
-    let count = undefined;
 
     const toggleButton = () => {
         setState(!state);
